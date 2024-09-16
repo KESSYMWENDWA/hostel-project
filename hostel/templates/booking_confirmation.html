@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Booking Confirmation</h2>
+        <p><strong>Room Number:</strong> {{ room.room_number }}</p>
+        <p><strong>Description:</strong> {{ room.description }}</p>
+        <p><strong>Check-in Date:</strong> {{ checkin }}</p>
+        <p><strong>Check-out Date:</strong> {{ checkout }}</p>
+        <p><strong>Price:</strong> ${{ room.price }}</p>
+        
+        <div class="mt-4">
+            <a href="{% url 'payment' %}?booking_id={{ booking.id }}" class="btn btn-primary">Proceed to Payment</a>
+        </div>
+
+        <div class="mt-3">
+            <a href="{% url 'rooms' %}" class="btn btn-secondary">Back to Rooms</a>
+        </div>
+    </div>
+</body>
+</html>

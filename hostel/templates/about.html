@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | SISI Hostels</title>
+    <section id="about" class="container my-5"></section>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <style>
+        .about-us-section {
+            padding: 50px 30px;
+            background-color: #f5f5f5;
+            font-family: 'Arial', sans-serif;
+        }
+        .about-us-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .about-us-text {
+            flex: 1 1 50%;
+            max-width: 50%;
+        }
+        .about-us-text h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .about-us-text p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .btn-learn-more {
+            padding: 12px 30px;
+            background-color: #ff6f61;
+            color: #fff;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .btn-learn-more:hover {
+            background-color: #e65a50;
+        }
+        .about-us-image {
+            flex: 1 1 45%;
+            max-width: 45%;
+            text-align: center;
+        }
+        .about-us-image img {
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        @media (max-width: 768px) {
+            .about-us-content {
+                flex-direction: column;
+            }
+            .about-us-text,
+            .about-us-image {
+                max-width: 100%;
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section id="about-us" class="about-us-section">
+        <div class="container">
+            <div class="about-us-content">
+                <div class="about-us-image">
+                    <img src="{% static 'images/hostel5.jpg' %}" alt="About Sisi Hostels">
+                </div>
+                <div class="about-us-text">
+                    <h2>About SISI Hostels</h2>
+                    <p>
+                        Welcome to Sisi Hostels, where comfort meets affordability in Kenya. Our mission is to offer exceptional accommodation for travelers, providing a warm and welcoming environment. Whether exploring iconic landmarks or enjoying a relaxing stay, Sisi Hostels is your perfect choice.
+                    </p>
+                    <p>
+                        Founded in 2024, Sisi Hostels combines modern amenities with traditional charm. Our founders aimed to provide budget-friendly, high-quality accommodation in one of the world’s most exciting cities. We believe that every traveler deserves a comfortable stay, which is why our core principles are Comfort, Affordability, and Community.
+                    </p>
+                    <p>
+                        At Sisi Hostels, we are committed to sustainability. We minimize our environmental impact through energy-efficient lighting and waste reduction practices. Join us as we continue to redefine the way travelers experience comfort and community.
+                    </p>
+                    <a href="#services" class="btn-learn-more">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

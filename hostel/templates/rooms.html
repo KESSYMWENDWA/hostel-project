@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms | Sisi Hostels</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    {% include 'navbar.html' %}
+    
+    <main>
+        <section class="rooms-section">
+            <div class="container">
+                <h1>Our Rooms</h1>
+                {% for room_type, rooms_list in categorized_rooms.items %}
+                    <div class="room-category">
+                        <h2>{{ room_type|capfirst }} Rooms</h2>
+                        <div class="room-container">
+                            {% for room in rooms_list %}
+                                <div class="room">
+                                    <img src="{{ room.image.url }}" alt="Room Image">
+                                    <div class="room-details">
+                                        <h3>Room Number: {{ room.room_number }}</h3>
+                                        <p><strong>Description:</strong> {{ room.description }}</p>
+                                        <p><strong>Price:</strong> ${{ room.price }}</p>
+                                        <p><strong>Status:</strong> {% if room.is_booked %}Booked{% else %}Available{% endif %}</p>
+                                        {% if not room.is_booked %}
+                                            <a href="{% url 'booking' room.id %}" class="btn btn-primary">Book Now</a>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            {% empty %}
+                                <p>No {{ room_type }} rooms available.</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        {% include 'footer.html' %}
+    </footer>
+</body>
+</html>

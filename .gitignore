@@ -1,0 +1,19 @@
+# Python
+*.py[cod]
+__pycache__/
+*.so
+
+# Virtual environment
+sisi/
+
+# Django
+*.log
+db.sqlite3
+media/
+
+# IDEs
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store

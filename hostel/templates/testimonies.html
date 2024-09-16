@@ -1,0 +1,127 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials | Sisi Hostels</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <section id="testimonies" class="container my-5"></section>
+
+
+    <style>
+        .testimonials-section {
+            padding: 50px 30px;
+            background-color: #f5f5f5;
+            font-family: 'Arial', sans-serif;
+        }
+        .testimonials-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .testimonials-content h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        .testimonials {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .testimonial {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .testimonial img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+        }
+        .testimonial-content {
+            flex: 1;
+        }
+        .testimonial p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #666;
+            margin: 0;
+        }
+        .testimonial .author {
+            font-weight: bold;
+            color: #333;
+        }
+        .rating {
+            margin-top: 10px;
+        }
+        .rating span {
+            font-size: 1.2em;
+            color: #ff6f61;
+        }
+        @media (max-width: 768px) {
+            .testimonials {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section id="testimonials" class="testimonials-section">
+        <div class="testimonials-content">
+            <h2>What Our Guests Say</h2>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <img src="{% static 'images/testimony1.jpg' %}" alt="Jane Doe">
+                    <div class="testimonial-content">
+                        <p>"Staying at Sisi Hostels was a fantastic experience. The staff was incredibly welcoming, and the amenities exceeded my expectations. I felt at home away from home. Highly recommended!"</p>
+                        <p class="author">- Jane Doe</p>
+                        <div class="rating">
+                            <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span> <!-- 4 stars out of 5 -->
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <img src="{% static 'images/testimony2.jpg' %}" alt="John Smith">
+                    <div class="testimonial-content">
+                        <p>"Sisi Hostels offers a perfect blend of comfort and affordability. The location is great, and the hostel is well-maintained. I had a pleasant stay and would definitely come back."</p>
+                        <p class="author">- John Smith</p>
+                        <div class="rating">
+                            <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span> <!-- 5 stars out of 5 -->
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <img src="{% static 'images/testimony3.jpg' %}" alt="Emily Johnson">
+                    <div class="testimonial-content">
+                        <p>"The atmosphere at Sisi Hostels is amazing. The communal areas are perfect for meeting other travelers, and the private rooms are cozy and clean. It was an enjoyable stay."</p>
+                        <p class="author">- Emily Johnson</p>
+                        <div class="rating">
+                            <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span> <!-- 4 stars out of 5 -->
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <img src="{% static 'images/testimony4.jpg' %}" alt="Michael Brown">
+                    <div class="testimonial-content">
+                        <p>"I was impressed by the sustainability efforts at Sisi Hostels. It’s great to see a hostel that cares about the environment while providing top-notch accommodation. I’ll definitely be back!"</p>
+                        <p class="author">- Michael Brown</p>
+                        <div class="rating">
+                            <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span> <!-- 5 stars out of 5 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup | Sisi Hostels</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        /* Add styles for signup and login forms */
+        .signup-section, .login-section {
+            padding: 50px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .signup-section form, .login-section form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .signup-section label, .login-section label {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .signup-section input, .login-section input {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .signup-section button, .login-section button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .signup-section button:hover, .login-section button:hover {
+            background-color: #0056b3;
+        }
+
+        .signup-section p, .login-section p {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{% url 'home' %}">Home</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="signup-section">
+            <div class="container">
+                <h1>Sign Up</h1>
+                <form method="post" action="{% url 'signup' %}">
+                    {% csrf_token %}
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    
+                    <button type="submit">Sign Up</button>
+                </form>
+                <p>Already have an account? <a href="{% url 'login' %}">Login here</a></p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <!-- Add footer content here -->
+    </footer>
+</body>
+</html>

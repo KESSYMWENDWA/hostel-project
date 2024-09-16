@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <section id="services" class="services-section">
+
+    <style>
+        /* Services Section Style */
+.services-section {
+    padding: 50px 0;
+    background-color: #ffffff;
+}
+
+.services-section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #343a40;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 0 20px;
+}
+
+.service-item {
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+}
+
+.service-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.service-item h3 {
+    font-size: 1.5em;
+    margin: 15px 0;
+    color: #343a40;
+}
+
+.service-item p {
+    font-size: 1em;
+    color: #666;
+    padding: 0 15px 15px;
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <!-- Add this after the "About Us" section -->
+    <section id="services" class="services-section">
+<section class="services-section">
+    <div class="main-container">
+        <h2>Services Offered</h2>
+        <div class="services-grid">
+            <div class="service-item">
+                <img src="{% static 'images/hostel7.jpg' %}" alt="Dormitory">
+                <h3>Spacious Dormitories</h3>
+                <p>Enjoy our well-maintained, spacious dormitories equipped with comfortable beds and secure lockers.</p>
+            </div>
+            <div class="service-item">
+                <img src="{% static 'images/hostel11.jpg' %}" alt="Private Room">
+                <h3>Private Rooms</h3>
+                <p>For those seeking more privacy, our private rooms offer a cozy and comfortable retreat with modern amenities.</p>
+            </div>
+            <div class="service-item">
+                <img src="{% static 'images/hostel9.jpg' %}" alt="Fully Equipped Kitchen">
+                <h3>Fully Equipped Kitchen</h3>
+                <p>Prepare your own meals in our clean, fully-equipped kitchen available to all guests.</p>
+            </div>
+            <div class="service-item">
+                <img src="{% static 'images/hostel6.jpg' %}" alt="Common Area">
+                <h3>Common Areas</h3>
+                <p>Relax and socialize in our inviting common areas, designed to enhance your stay and meet fellow travelers.</p>
+            </div>
+            <div class="service-item">
+                <img src="{% static 'images/hostel8.jpg' %}" alt="Free Wi-Fi">
+                <h3>Free Wi-Fi</h3>
+                <p>Stay connected with complimentary high-speed Wi-Fi throughout the hostel.</p>
+            </div>
+            <div class="service-item">
+                <img src="{% static 'images/hostel10.jpg' %}" alt="24/7 Reception">
+                <h3>24/7 Reception</h3>
+                <p>Our friendly staff are available around the clock to assist with any needs or queries.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</body>
+</html>
